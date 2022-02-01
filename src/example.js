@@ -1,9 +1,19 @@
-import React from 'react'
-import { Button, Popup } from '@fluentui/react-northstar'
-import { MoreIcon } from '@fluentui/react-icons-northstar'
+import React from "react";
+import { Button, Popup } from "@fluentui/react-northstar";
+import { MoreIcon } from "@fluentui/react-icons-northstar";
 
 const PopupExample = () => (
-  <Popup trigger={<Button icon={<MoreIcon />} title="Show popup" />} content="Hello from popup!" />
-)
+  <>
+    <Popup
+      trigger={<Button icon={<MoreIcon />} title="Show popup" />}
+      content="Leaking popup!"
+    />
+    <Popup
+      onRestoreFocus={() => {}}
+      trigger={<Button icon={<MoreIcon />} title="Show popup" />}
+      content="Fixed popup!"
+    />
+  </>
+);
 
-export default PopupExample
+export default PopupExample;
